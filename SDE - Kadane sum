@@ -1,0 +1,11 @@
+a=[-2, -3, 4, -1, -2, 1, 5, -3]
+maxsum=0
+maxsofar=float('-inf') 
+for i in range(0,len(a)-1):
+    maxsum=a[i]+maxsum
+    if maxsofar<maxsum:
+        maxsofar=maxsum
+    if maxsum<0:
+        maxsum=0
+
+print(maxsofar)
