@@ -1,0 +1,16 @@
+arr=[4,1,2,3,4]
+arr.sort()
+print(arr)
+repeatedelement =0
+missingelement=0
+for i in range(0,len(arr)-1):
+    if arr[i]==arr[i-1]:
+        repeatedelement=arr[i]
+        if arr[i+1]==arr[i]+2:
+            missingelement=arr[i]+1
+    if i+1==len(arr)-1: 
+        missingelement=arr[i]+1
+        repeatedelement=arr[i]
+        
+print(missingelement,repeatedelement)
+

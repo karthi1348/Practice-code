@@ -1,0 +1,20 @@
+N = 6
+nums = [11,33,33,11,33,11]
+unique = []
+frequency = []
+value =[]
+for i in range(len(nums)):
+    if nums[i] not in unique:
+        unique.append(nums[i])
+
+for num in unique:
+    count = nums.count(num)  # Count occurrences of each unique number directly
+    frequency.append(count)
+
+for i in range(0,len(frequency)):
+    if frequency[i]>N/3:
+        value.append(unique[i])
+print(nums)
+print(unique)
+print(frequency)
+print(value)

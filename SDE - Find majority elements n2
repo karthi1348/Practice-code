@@ -1,0 +1,20 @@
+N = 7
+nums = [2,2,1,1,1,2,2]
+unique = []
+frequency = []
+value =0 
+for i in range(len(nums)):
+    if nums[i] not in unique:
+        unique.append(nums[i])
+
+for num in unique:
+    count = nums.count(num)  # Count occurrences of each unique number directly
+    frequency.append(count)
+
+for i in range(0,len(frequency)):
+    if frequency[i]>N/2:
+        value = unique[i]
+print(nums)
+print(unique)
+print(frequency)
+print(value)
