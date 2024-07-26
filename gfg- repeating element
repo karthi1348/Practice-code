@@ -1,0 +1,13 @@
+string = 'aabc'
+arr=[]
+for i in range(0,len(string)):
+    if string[i]==string[i-1]:
+        arr.append("#")
+    else:
+        arr.append(string[i])
+
+print(''.join(arr))
+
+    
+        
+        
