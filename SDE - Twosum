@@ -1,25 +1,19 @@
-def two_sum(nums, target):
-    # Dictionary to store the complement and its index
-    num_to_index = {}
-    
-    for index, num in enumerate(nums):
-        complement = target - num
-        if complement in num_to_index:
-            return [num_to_index[complement], index]
-        num_to_index[num] = index
-    
-    return None  # Return None if no pair is found
+nums=[3,3]
+target = 6
 
-# Example usage
-nums = [0,4,3,0]
-target = 0
-result = two_sum(nums, target)
+arr=[0]*len(nums)
+answer=0
+for i in range(0,len(nums)-1):
+    a=nums[i]
+    ans=target-a
+    if ans in arr:
+        print("yes")
+        answer=ans+a
+    arr[i]=a
 
-if result:
-    print(f'The indices of the two numbers that add up to {target} are {result}')
-else:
-    print('No two numbers add up to the target')
 
+print(arr)
+print(answer)
         
 
 

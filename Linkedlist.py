@@ -56,24 +56,38 @@ class linkedlist:
             prevnode=currentnode
             currentnode=nextnode
         self.head=prevnode
-
-       
-            
+    def lenll(self):
+        currentnode=self.head
+        count=0
+        while currentnode:
+            currentnode=currentnode.next
+            count=count+1
+        return count
+    def middle(self):
+        currentnode=self.head
+        a=self.lenll()
+        b=a//2
+        for _ in range(b):
+            currentnode=currentnode.next
+        print(currentnode.data)
     
-
-        
+   
+            
+       
 l1=linkedlist()
 l1.append(1)
 l1.append(2)
+l1.append(3)
+l1.append(4)
 l1.append(5)
 l1.append(6)
+l1.append(7)
+l1.append(8)
 l1.display()
-l1.addafter(3,1)
-l1.display()
-l1.addbefore(4,4)
-l1.display()
-l1.reverselist()
-l1.display()
+l1.middle()
+
+
+
         
 
 
